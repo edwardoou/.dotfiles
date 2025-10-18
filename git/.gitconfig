@@ -1,0 +1,33 @@
+[user] # If local config does not exist, this user is used.
+	name = edwardoou
+	email = 67031155+edwardoou@users.noreply.github.com
+
+# Usuario y Correo de git personalizados por carpeta donde se trabajara
+# https://www.freecodecamp.org/news/how-to-handle-multiple-git-configurations-in-one-machine/
+[includeIf "gitdir:~/proyectos/personal/"]
+  	path = ~/.gitconfig-personal
+#-------------------------------------------------------------------------------
+[init]
+	defaultBranch = main
+[core]
+	editor = code --wait
+#Source: https://spin.atomicobject.com/2020/05/05/git-configurations-default/
+[pull]
+  rebase = true
+[fetch]
+  prune = true
+#-------------------------------------------------------------------------------
+[color]
+  ui = true
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red
+  new = green
+[format]
+  #Se observa esto con git log
+  pretty = format:%C(blue)%ad%Creset %C(yellow)%h%C(green)%d%Creset %C(blue)%s %C(magenta) [%an]%Creset
