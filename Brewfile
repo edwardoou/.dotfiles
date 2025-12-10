@@ -1,6 +1,3 @@
-tap "homebrew/bundle"
-tap "homebrew/services"
-
 # Core
 #brew "node"              # Estoy usando nvm de momento, hay problemas de nvm con homebrew por eso hago la instalacion directa.
 #brew "smartmontools"     # para verificar el estado de los discos
